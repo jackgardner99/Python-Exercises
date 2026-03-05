@@ -11,14 +11,31 @@ class Dog:
     
     # another instance method
     def speak(self, sound):
-        return f"{self.name} says {sound}"
+        return f"{self.name} barks: {sound}"
     
-miles = Dog("Miles", 6)
+class JackRussellTerrior(Dog):
+    def speak(self, sound="Arf"):
+        return super().speak(sound)
 
+class GoldenRetriever(Dog):
+    def speak(self, sound="Bark"):
+        return super().speak(sound)
 
+class Dachshund(Dog):
+    pass
 
-print(miles.speak("Woof Woof"))
+class Bulldog(Dog):
+    pass
 
-print(miles.speak("Bow Wow"))
+    
+miles = JackRussellTerrior("Miles", 6)
+buddy = Dachshund("Buddy", 9)
+jack = Bulldog("Jack", 3)
+jim = Bulldog("Jim", 5)
+charlotte = GoldenRetriever("Charlotte", 2)
 
-print(miles)
+print(miles.speak())
+print(buddy.speak("Yap"))
+print(jim.speak("Woof"))
+print(jack.speak("Woof"))
+print(charlotte.speak())
