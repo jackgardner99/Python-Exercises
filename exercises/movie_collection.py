@@ -41,3 +41,20 @@ def remove_movie(title):
 remove_movie("Star Wars")
 
 display_movies()
+
+def update_movie(title, new_director, new_year):
+    for movie in movie_collection:
+        movie_title, movie_director, movie_year = movie
+        if title.lower() == movie_title.lower():
+            movie_collection.remove(movie)
+            new_movie = title, new_director, new_year
+            movie_collection.append(new_movie)
+            
+
+
+update_movie("IT", "Stephen King", 1990)
+
+display_movies()
+
+movie_collection.sort(key=lambda movie: movie[2])
+print(movie_collection)
