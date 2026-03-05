@@ -137,6 +137,8 @@ isabella = GoldFish()
 lucas = Goose()
 mia = MiniaturePony()
 
+print(miss_fuzz)
+
 miss_fuzz.name = "Miss Fuzz"
 miss_fuzz.species = "domestic llama"
 
