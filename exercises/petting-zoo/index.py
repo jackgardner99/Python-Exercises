@@ -23,4 +23,4 @@ mia = MiniaturePony("Mia", "Miniature Pony", "morning", "grass")
 print(f"{liam.name} the {liam.species} is available to pet during the {liam.shift} shift.")
 amelia.feed()
 
-
+print(olivia)
